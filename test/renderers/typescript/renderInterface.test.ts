@@ -3,9 +3,9 @@ import format from "../../support/format"
 
 describe("renderInterface()", () => {
   it("works", () => {
-    expect(format(renderInterface({ name: "IFoo", fields: "field: string" })))
+    expect(format(renderInterface({ name: "Foo", fields: "field: string" })))
       .toMatchInlineSnapshot(`
-      "export interface IFoo {
+      "export interface Foo {
         field: string;
       }"
     `)
@@ -15,14 +15,14 @@ describe("renderInterface()", () => {
     expect(
       format(
         renderInterface({
-          name: "IFoo",
+          name: "Foo",
           fields: "field: string",
           description: "Example interface",
         }),
       ),
     ).toMatchInlineSnapshot(`
       "/** Example interface */
-      export interface IFoo {
+      export interface Foo {
         field: string;
       }"
     `)

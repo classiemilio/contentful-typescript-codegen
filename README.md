@@ -68,7 +68,7 @@ Options
 Here's an idea of what the output will look like for a Content Type:
 
 ```ts
-interface IBlogPostFields {
+interface BlogPostFields {
   /** Title */
   title: string
 
@@ -94,7 +94,7 @@ interface IBlogPostFields {
 /**
  * A blog post.
  */
-export interface IBlogPost extends Entry<IBlogPostFields> {}
+export interface BlogPost extends Entry<IBlogPostFields> {}
 ```
 
 You can see that a few things are handled for you:
